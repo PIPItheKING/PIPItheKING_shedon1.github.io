@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>שדוניקס - המומחים בהסתרת כסף בספות</title>
+    <style>
+        /* CSS כלול כאן */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5dc; /* בז' */
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #556B2F; /* ירוק כהה */
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #6B8E23; /* ירוק מעט בהיר */
+        }
+
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        nav a:hover {
+            background-color: #8FBC8F;
+        }
+
+        .hero {
+            background-image: url('https://i.ibb.co/2dt63dn/DALL-E-2024-10-24-18-11-28-A-whimsical-scene-featuring-playful-little-goblins-hiding-coins-and-cash.webp'); /* תמונת רקע */
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-shadow: 2px 2px 4px #000;
+        }
+
+        .hero h1 {
+            font-size: 3em;
+            text-align: center;
+        }
+
+        .container {
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            color: #2F4F4F; /* כחול עמוק */
+            border-bottom: 2px solid #2F4F4F;
+            padding-bottom: 10px;
+        }
+
+        .services, .how-it-works, .testimonials, .faq {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .service, .step, .testimonial, .faq-item {
+            flex: 1 1 calc(33% - 40px);
+            background-color: #fff8dc; /* צהוב פסטל */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .testimonial {
+            flex: 1 1 100%;
+        }
+
+        footer {
+            background-color: #556B2F;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        /* כפתורים */
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #2F4F4F;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #3CB371;
+        }
+
+        /* טופס יצירת קשר */
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0 15px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .contact-form button {
+            background-color: #2F4F4F;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .contact-form button:hover {
+            background-color: #3CB371;
+        }
+
+        /* תגובה לדפדפן */
+        @media (max-width: 768px) {
+            .services, .how-it-works, .faq {
+                flex-direction: column;
+            }
+
+            .service, .step, .faq-item {
+                flex: 1 1 100%;
+            }
+        }
+
+        /* סגנון לתמונות */
+        .service-image, .testimonial-image, .blog-image {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .testimonial-image {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- כותרת ראשית -->
+    <header>
+        <h1>שדוניקס</h1>
+        <p>"הכסף שלך במקומות שלא חשבת – עם קצת קסם שדוני!"</p>
+    </header>
+
+    <!-- תפריט ניווט -->
+    <nav>
+        <a href="#home">דף הבית</a>
+        <a href="#about">עלינו</a>
+        <a href="#services">השירותים שלנו</a>
+        <a href="#how-it-works">איך זה עובד</a>
+        <a href="#testimonials">המלצות</a>
+        <a href="#contact">צור קשר</a>
+        <a href="#blog">בלוג</a>
+        <a href="#faq">שאלות נפוצות</a>
+    </nav>
+
+    <!-- דף הבית -->
+    <section id="home" class="hero">
+        <div>
+            <h1>ברוכים הבאים ל-שדוניקס – המומחים בהסתרת כסף בספות!</h1>
+            <a href="#contact" class="btn">הזמן שירות עכשיו</a>
+        </div>
+    </section>
+
+    <div class="container">
+
+        <!-- עלינו -->
+        <section id="about">
+            <h2>מי אנחנו?</h2>
+            <p>
+                שדוניקס הוקם בשנת 2020 על ידי קבוצה של שדונים מקצועיים שמבינים את הצרכים של הלקוחות המודרניים. עם שילוב של ידע טכני וקסם עתיק, אנו מציעים פתרון ייחודי ומאובטח לאחסון הכסף שלך. המטרה שלנו היא לספק לך שקט נפשי ולהבטיח שהנכסים שלך יהיו מוגנים בדרכים בלתי רגילות ומקוריות.
+            </p>
+        </section>
+
+        <!-- השירותים שלנו -->
+        <section id="services">
+            <h2>מה אנחנו מציעים?</h2>
+            <div class="services">
+                <div class="service">
+                    <img src="https://i.ibb.co/PFPPGhv/DALL-E-2024-10-24-18-11-27-A-playful-scene-of-mischievous-little-goblins-placing-coins-and-cash-betw.webp" alt="שדון מוסיף כסף לספה" class="service-image">
+                    <h3>הסתרת כספים בספות</h3>
+                    <p>בחירה מתוך מגוון ספות מעוצבות, הסתרה דיסקרטית ושקטה בכסף שלך.</p>
+                </div>
+                <div class="service">
+                    <img src="https://i.ibb.co/3MCrHTD/DALL-E-2024-10-24-18-11-25-A-whimsical-scene-of-mischievous-little-goblins-placing-coins-and-cash-be.webp" alt="שדונים מבצעים בדיקות אבטחה" class="service-image">
+                    <h3>בדיקות אבטחה</h3>
+                    <p>בדיקות תקופתיות לוודא את שלמות ההסתרה, דיווח מפורט ללקוח.</p>
+                </div>
+                <div class="service">
+                    <img src="https://i.ibb.co/fFSVsd3/DALL-E-2024-10-24-18-17-50-A-playful-scene-featuring-a-single-mischievous-goblin-placing-coins-and-c.webp" alt="שדון מאחזר כסף מהספה" class="service-image">
+                    <h3>שירותי התאוששות</h3>
+                    <p>גישה מהירה ומאובטחת לכספים במקרים של צורך.</p>
+                </div>
+                <div class="service">
+                    <img src="https://i.ibb.co/J7MwkdD/DALL-E-2024-10-24-18-17-51-A-playful-scene-featuring-a-single-mischievous-goblin-placing-coins-and-c.webp" alt="שדון מעצב ספה בהתאמה אישית" class="service-image">
+                    <h3>התאמה אישית</h3>
+                    <p>פתרונות מותאמים אישית בהתאם לצרכי הלקוח, עיצוב הספות לפי רצון הלקוח.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- איך זה עובד -->
+        <section id="how-it-works">
+            <h2>שלושת הצעדים להבטחת הכסף שלך</h2>
+            <div class="how-it-works">
+                <div class="step">
+                    <h3>בחר את הספה שלך</h3>
+                    <p>גלריית הספות שלנו מאפשרת לך לבחור את העיצוב המתאים לביתך.</p>
+                </div>
+                <div class="step">
+                    <h3>הסתרת הכסף</h3>
+                    <p>צוות השדונים שלנו יסתיר את הכסף במקום הנבחר בצורה דיסקרטית ובטוחה.</p>
+                </div>
+                <div class="step">
+                    <h3>קבל אישור</h3>
+                    <p>תקבל אישור דיגיטלי למיקום ההסתרה עם הוראות גישה במידת הצורך.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- המלצות -->
+        <section id="testimonials">
+            <h2>מה הלקוחות שלנו אומרים</h2>
+            <div class="testimonials">
+                <div class="testimonial">
+                    <img src="https://i.ibb.co/2dt63dn/DALL-E-2024-10-24-18-11-28-A-whimsical-scene-featuring-playful-little-goblins-hiding-coins-and-cash.webp" alt="דנה לוי" class="testimonial-image">
+                    <p>"שדוניקס סיפקו לי פתרון מושלם לאחסון הכסף שלי. הספה נראית נהדר והכסף בטוח לחלוטין!"</p>
+                    <h4>דנה לוי</h4>
+                </div>
+                <div class="testimonial">
+                    <img src="https://i.ibb.co/PFPPGhv/DALL-E-2024-10-24-18-11-27-A-playful-scene-of-mischievous-little-goblins-placing-coins-and-cash-betw.webp" alt="יוסי כהן" class="testimonial-image">
+                    <p>"השירות היה מקצועי ובלתי נשכח. ההסתרה בספה היא רעיון גאוני!"</p>
+                    <h4>יוסי כהן</h4>
+                </div>
+                <div class="testimonial">
+                    <img src="https://i.ibb.co/3MCrHTD/DALL-E-2024-10-24-18-11-25-A-whimsical-scene-of-mischievous-little-goblins-placing-coins-and-cash-be.webp" alt="מירית ברק" class="testimonial-image">
+                    <p>"הצוות היה אדיב וקשוב לצרכים שלי. ממליצה בחום!"</p>
+                    <h4>מירית ברק</h4>
+                </div>
+            </div>
+        </section>
+
+        <!-- צור קשר -->
+        <section id="contact">
+            <h2>יש לך שאלות? אנחנו כאן בשבילך!</h2>
+            <div class="contact-form">
+                <form onsubmit="submitForm(event)">
+                    <label for="name">שם:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">אימייל:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="message">הודעה:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+
+                    <button type="submit">שלח</button>
+                </form>
+            </div>
+            <div class="contact-info">
+                <p>טלפון: 03-1234567</p>
+                <p>אימייל: <a href="mailto:info@shadonicx.co.il">info@shadonicx.co.il</a></p>
+                <p>כתובת: רחוב הדמיון 10, תל אביב</p>
+                <div class="social-media">
+                    <a href="#" target="_blank">פייסבוק</a> |
+                    <a href="#" target="_blank">אינסטגרם</a> |
+                    <a href="#" target="_blank">טוויטר</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- בלוג -->
+        <section id="blog">
+            <h2>בלוג</h2>
+            <div class="blog-posts">
+                <div class="blog-post">
+                    <img src="https://i.ibb.co/fFSVsd3/DALL-E-2024-10-24-18-17-50-A-playful-scene-featuring-a-single-mischievous-goblin-placing-coins-and-c.webp" alt="אבטחת נכסים בצורה יצירתית" class="blog-image">
+                    <h3>אבטחת נכסים בצורה יצירתית</h3>
+                    <p>במאמר זה נחקור את השיטות הייחודיות שלנו לאבטחת כספים באמצעות ספות מעוצבות...</p>
+                    <a href="#" class="btn">קרא עוד</a>
+                </div>
+                <div class="blog-post">
+                    <img src="https://i.ibb.co/J7MwkdD/DALL-E-2024-10-24-18-17-51-A-playful-scene-featuring-a-single-mischievous-goblin-placing-coins-and-c.webp" alt="סיפורים מהשטח" class="blog-image">
+                    <h3>סיפורים מהשטח</h3>
+                    <p>כיצד שדוניקס עזרו ללקוחות לשמור על כספם במקומות בלתי צפויים...</p>
+                    <a href="#" class="btn">קרא עוד</a>
+                </div>
+                <div class="blog-post">
+                    <img src="https://i.ibb.co/2dt63dn/DALL-E-2024-10-24-18-11-28-A-whimsical-scene-featuring-playful-little-goblins-hiding-coins-and-cash.webp" alt="טיפים לשמירה על כספים" class="blog-image">
+                    <h3>טיפים לשמירה על כספים</h3>
+                    <p>כמה טיפים פשוטים לשמירה על כספך בטוחים ומוגנים...</p>
+                    <a href="#" class="btn">קרא עוד</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- שאלות נפוצות -->
+        <section id="faq">
+            <h2>שאלות נפוצות</h2>
+            <div class="faq">
+                <div class="faq-item">
+                    <h3>כמה כסף ניתן להסתר?</h3>
+                    <p>אנחנו יכולים להסתר סכומים משתנים בהתאם לצרכי הלקוח ולסוג הספה הנבחר.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>כיצד ניתן לגשת לכסף?</h3>
+                    <p>באמצעות הוראות גישה אישיות ומאובטחות שמסופקות ללקוח.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>האם השירות מבוטח?</h3>
+                    <p>כן, כל ההסתרות מוגנות בביטוח מקיף שמבטיח את שלמות הכספים.</p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- תחתית האתר -->
+    <footer>
+        <p>&copy; 2024 שדוניקס. כל הזכויות שמורות.</p>
+    </footer>
+
+    <!-- JavaScript בסיסי -->
+    <script>
+        function submitForm(event) {
+            event.preventDefault();
+            // כאן ניתן להוסיף קוד לשליחת הטופס לשרת
+            alert('תודה על הפנייה! ניצור איתך קשר בקרוב.');
+            event.target.reset();
+        }
+    </script>
+
+</body>
+</html>
